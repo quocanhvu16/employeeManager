@@ -1,0 +1,133 @@
+@import url('./../base/button.css');
+@import url('./../base/popup.css');
+
+.header{
+    height: 56px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header__store{
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.header__store--icon{
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -1157px -32px;
+	width: 16px;
+	height: 16px;
+}
+
+.header__logo{
+    /* background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -1232px -1015px; */
+	width: 36px;
+	height: 36px;
+    /* scale: 0.8; */
+    /* background-color: yellow; */
+    margin-right: 8px;
+    position: relative;
+}
+
+.header__logo--icon{
+    position: absolute;
+    width: 115px;
+    height: 115px;
+    top: -39.5px;
+    left: -1.5px;
+}
+
+
+.header__nameApp p{
+    font-size: 20px;
+    font-family: RobotoBold;
+    color: #3D0099;
+    font-weight: 700;
+}
+
+.header__nameCompany{
+    position: absolute;
+    left: 224px;
+}
+
+.header__nameCompany p{
+    font-size: 18px;
+    font-family: RobotoRegular;
+    color: #212121;
+}
+
+.header__menu{
+    height: 24px;
+    position: absolute;
+    right: 84px;
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.header__menu--setting{
+    -webkit-mask: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -676px -30px;
+    mask: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -676px -30px;
+	width: 23px;
+	height: 24px;
+    cursor: pointer;
+    background-color: #666666;
+}
+.header__menu--setting:hover,.header__menu--setting:active{
+    background-color: #1fb6ff;
+}
+
+.header__menu--notification{
+    -webkit-mask: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -788px -30px;
+    mask: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -788px -30px;
+    cursor: pointer;
+    background-color: #707070;
+    width: 22px;
+	height: 21px;
+}
+.header__menu--notification:hover,.header__menu--notification:active{
+    background-color: #1fb6ff;
+}
+
+.header__menu--question{
+    -webkit-mask: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -732px -31px;
+    mask: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -732px -31px;
+    cursor: pointer;
+    background-color: #707070;
+	width: 22px;
+	height: 22px;
+}
+.header__menu--question:hover,.header__menu--question:active{
+    background-color: #1fb6ff;
+}
+
+.header__menu--more{
+    -webkit-mask: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -568px -30px;
+    mask: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -568px -30px;
+    cursor: pointer;
+    background-color: #707070;
+	width: 24px;
+	height: 24px;
+}
+.header__menu--more:hover,.header__menu--more:active{
+    background-color: #1fb6ff;
+}
+
+.header__avatar{
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    right: 24px;
+}
+
+.header__avatar img{
+    width: 36px;
+    height: 36px;
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1824" height="608" viewBox="0 0 1824 608">
+            <defs>
+              <clipPath id="clip-Logo_Module_TiengViet_White">
+                <rect width="1824" height="608"/>
+              </clipPath>
+            </defs>
+            <g id="Logo_Module_TiengViet_White" clip-path="url(#clip-Logo_Module_TiengViet_White)">
+              <g id="Group_42284" data-name="Group 42284" transform="translate(9)">
+                <g id="icon">
+                  <path id="Path_1" data-name="Path 1" d="M432.178,55.512a280.284,280.284,0,0,0-258.237,0L303.05,184.621,422.379,303.95,551.507,174.822A281.222,281.222,0,0,0,432.178,55.512Z" fill="#ff9500"/>
+                  <path id="Path_2" data-name="Path 2" d="M303,423.374,183.689,304.066,54.56,433.173A280,280,0,0,0,432.126,552.5Z" fill="#4cd964"/>
+                  <path id="Path_3" data-name="Path 3" d="M551.508,174.936,422.379,304.064l-119.33,119.31L432.179,552.5A280.015,280.015,0,0,0,551.488,174.936Z" fill="#007aff"/>
+                  <path id="Path_4" data-name="Path 4" d="M173.889,55.512C36.741,126.866-16.674,295.851,54.56,433.058L183.688,303.95,303,184.62Z" fill="#ff3b30"/>
+                  <rect id="Rectangle_12" data-name="Rectangle 12" width="168.747" height="168.747" transform="translate(183.711 304.001) rotate(-45)" fill="#393a3d"/>
+                  <path id="Path_5" data-name="Path 5" d="M218.625,338.962,55.18,432.514,183.689,304.026Z" opacity="0.15" style="isolation: isolate"/>
+                  <path id="Path_6" data-name="Path 6" d="M268.08,219.557,174.528,56.112,303.037,184.621Z" opacity="0.15" style="isolation: isolate"/>
+                  <path id="Path_7" data-name="Path 7" d="M387.442,269.034l163.445-93.552L422.379,303.991Z" opacity="0.15" style="isolation: isolate"/>
+                  <path id="Path_8" data-name="Path 8" d="M337.989,388.437l93.552,163.445L303.031,423.374Z" opacity="0.15" style="isolation: isolate"/>
+                  <path id="Path_10" data-name="Path 10" d="M303.024,206.956l97.052,97.054-97.052,97.029L205.993,304.01Z" fill="#fff"/>
+                </g>
+              </g>
+            </g>
+          </svg>

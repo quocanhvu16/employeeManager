@@ -1,0 +1,60 @@
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Repository.deps.json
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Repository.dll
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Repository.pdb
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Common.dll
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Common.pdb
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.AssemblyInfo.cs
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.csproj.CopyComplete
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.dll
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\refint\Demo.WebApplication.Repository.dll
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.pdb
+C:\Users\Admin\source\repos\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\ref\Demo.WebApplication.Repository.dll
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Repository.deps.json
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Repository.dll
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Repository.pdb
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Common.dll
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Common.pdb
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.csproj.CopyComplete
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.dll
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\refint\Demo.WebApplication.Repository.dll
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.pdb
+C:\Users\Admin\Desktop\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\ref\Demo.WebApplication.Repository.dll
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Repository.deps.json
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Repository.dll
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Repository.pdb
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Common.dll
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Common.pdb
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.AssemblyInfo.cs
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.csproj.CopyComplete
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.dll
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\refint\Demo.WebApplication.Repository.dll
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.pdb
+C:\Users\Admin\Desktop\New folder\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\ref\Demo.WebApplication.Repository.dll
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Repository.deps.json
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Repository.dll
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Repository.pdb
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Common.dll
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\bin\Debug\net6.0\Demo.WebApplication.Common.pdb
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.AssemblyInfo.cs
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.csproj.CopyComplete
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.dll
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\refint\Demo.WebApplication.Repository.dll
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\Demo.WebApplication.Repository.pdb
+C:\Users\Admin\Desktop\New folder\New\Demo.WebApplication\Demo.WebApplication.Repository2\obj\Debug\net6.0\ref\Demo.WebApplication.Repository.dll

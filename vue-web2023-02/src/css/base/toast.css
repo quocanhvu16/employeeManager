@@ -1,0 +1,111 @@
+#toast{
+    position: fixed;
+    right: 31px;
+    top: 27px;
+    z-index: 1000;
+}
+
+.toast{
+    background-color: #ffffff;
+    min-width: 450px;
+    max-width: 650px;
+    height: 56px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    animation: slideInLeft ease .3s, fadeOut linear 1s 5s forwards;
+    transition: all linear 0.3s;
+}
+
+@keyframes slideInLeft{
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 31px));;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut{
+    to{
+        opacity: 0;
+    }
+}
+
+.toast__icon{
+    margin-left: 16px;
+    margin-right: 8px;
+}
+
+.toast__action{
+    color: #1F1F1F;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.toast__icon i{
+    font-size: 20px;
+}
+
+.toast__body{
+    flex-grow: 1;
+    max-width: 460px;
+}
+
+.toast__body p{
+    font-size: 14px;
+    color: #1F1F1F;
+}
+
+.toast__body span{
+    font-weight: 700;
+}
+
+.toast__body u{
+    cursor: pointer;
+}
+
+.toast__close{
+    margin-left: 16px;
+    margin-right: 16px;
+    cursor: pointer;
+    color: #999999;
+}
+
+.toast + .toast{
+    margin-top: 24px;
+}
+
+.toast--success{
+    color:#50B83C;
+}
+
+.toast--success .toast__body span{
+    color:#50B83C;
+}
+
+.toast--error{
+    color: #DE3618;
+}
+
+.toast--error .toast__body span{
+    color:#DE3618;
+}
+
+.toast--warning{
+    color: #F49342;
+}
+
+.toast--warning .toast__body span{
+    color:#F49342;
+}
+
+.toast--info{
+    color: #0062CC;
+}
+
+.toast--info .toast__body span{
+    color:#0062CC;
+}

@@ -1,0 +1,81 @@
+@import url('./component/header.css');
+@import url('./component/main.css');
+@import url('./component/menu.css');
+@import url('./base/toast.css');
+@import url('./base/popup.css');
+@import url('./base/comboBox.css');
+@import url('./base/tooltip.css');
+@import url('./base/table.css');
+/* @import 'v-tooltip/dist/v-tooltip.css'; */
+@import 'microtip';
+
+:root {
+    --primary-color:#50B83C;
+    --secondary-color: #ffffff;
+}
+
+* {
+    font-family: RobotoRegular;
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url('./../assets/font/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url('./../assets/font/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: RobotoMedium;
+    src: url('./../assets/font/Roboto-Medium.ttf');
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #EEEFF1;
+}
+
+h1,p{
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.loading{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(37, 25, 25, 0.3);
+    z-index: 100;
+}
+.loading.active{
+    display: flex;
+}
+.loading img{
+    animation: a linear 2.5s infinite;
+}
+
+@keyframes a {
+    from{
+        rotate: 0;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+

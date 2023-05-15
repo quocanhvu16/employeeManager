@@ -1,0 +1,563 @@
+/**
+*Cái chung cho cả body và head
+*/
+
+.main__content--table .table{
+  border-collapse:collapse;
+  font-size: 14px;
+  color: #000000;
+  width: 100%;
+  position: relative;
+}
+
+.table--body td:not(.table__checkbox,.table__MNV){
+  position: relative;
+}
+
+.table .table--body td::before,.table .table--head td::before{
+  height: 100%;
+  width: 0.8px;
+  content: "";
+  background-color: #E0E0E0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.table td{
+  padding: 0;
+  height: 48px;
+  border-bottom: 1px solid #E0E0E0;
+  /* border-right: 1px solid #E0E0E0; */
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-right: 16px;
+  min-width: 170px;
+  max-width: 300px;
+}
+
+/**
+*Table body
+*/
+
+tbody .table__checkbox input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  top: 0px;
+  left: -1px;
+  z-index: 1;
+}
+
+tbody .checkmark{
+  position:absolute;
+  top:15px;
+  left:18px;
+  width:18px;
+  height:18px;
+  background:#ffffff;
+  border-radius:4px;
+  border: 1px solid #616161;
+}
+
+tbody .table__checkbox:hover .checkmark{
+  background:#e5e5e5;
+}
+
+tbody .checkmark:after{
+  font-family: 'Font Awesome 5 Free';
+  content:"\f00c";
+  position:absolute;
+  display:none;
+}
+
+tbody .table__checkbox .checkmark:after{
+  top:40%;
+  left:50%;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform:translate(-50%,-50%) rotate(45deg);
+}
+
+
+tbody .table__checkbox input:checked ~ .checkmark{
+  background:#50B83C;
+  border-color: #50B83C;
+}
+
+tbody .table__checkbox input:checked ~ .checkmark:after{
+  display:block;
+  color: #ffffff;
+}
+
+@media screen and (min-height: 800px) {
+  .main__content--table {
+      height: 584px;
+  }
+}
+
+.table--body td.table__MNV,.table--body td.table__checkbox{
+  z-index: 2;
+}
+
+.table--body.skeleton td p {
+  position: relative;
+  background-color: #EBECEE;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.table--body.skeleton td p::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(90deg,#e5e5e5,#f0f0f0,#f0f0f0,#e5e5e5);
+  background-size: 200%;
+  animation: skeleton 1s infinite reverse;
+}
+
+@keyframes skeleton {
+  0%{
+      background-position: -100% 0;
+  }
+  100%{
+      background-position: 100% 0;
+  }
+}
+
+.table .table--body td{
+  font-family: RobotoRegular !important;
+  font-weight: 400;
+}
+
+.table .table--body .active{
+  background-color: #edf8eb;
+}
+
+.table__checkbox{
+  position: sticky;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 57.4px !important;
+}
+
+.table__MNV{
+  position: sticky;
+  left: 57.4px;
+  background-color: #ffffff;
+}
+
+.table__TNV{
+  min-width: 220px !important;
+}
+
+.table .table--body td p{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table .table--body.skeleton td p{
+  overflow: unset;
+}
+
+
+.table__GT{
+  min-width: 90px !important;
+  white-space: nowrap;
+}
+
+.table__NS{
+  min-width: 150px !important;
+}
+
+.table__CMND{
+  min-width: 150px !important;
+}
+
+.table__CD{
+  min-width: 150px !important;
+}
+
+.table__TDV{
+  min-width: 200px !important;
+}
+
+.table__STK{
+  min-width: 130px !important;
+}
+
+.table__TNH{
+  min-width: 130px !important;
+}
+
+.table__CNTKNH{
+  min-width: 230px !important;
+}
+.table__CN{
+  min-width: 150px !important;
+}
+
+.left{
+  text-align: left;
+}
+.center{
+  text-align: center;
+}
+.right{
+  text-align: right;
+}
+
+tbody .table__CN{
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table__CN--edit{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+  background-color: transparent;
+  position: sticky;
+  right: 20px;
+  z-index: 1;
+  margin-top:7px;
+}
+
+.table__CN--edit .edit,
+.table__CN--edit .remove,
+.table__CN--edit .duplicate{
+  z-index: 10000;
+  background-color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 36px;height: 36px;border-radius: 18px;
+}
+
+.edit-icon{
+  -webkit-mask: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -1434px -90px;
+  mask: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -1434px -90px;
+  width: 20px;
+  height: 20px;
+  background-color: #6c6c6c;
+}
+
+.table__CN--edit .edit:hover .edit-icon{
+  background-color: #1fb6ff;
+}
+
+.duplicate-icon{
+  -webkit-mask: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -1546px -89px;
+  mask: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -1546px -89px;
+  width: 21px;
+  height: 21px;
+  background-color: #6c6c6c;
+}
+
+.table__CN--edit .duplicate:hover .duplicate-icon{
+  background-color: #FFAD33;
+}
+
+.remove-icon{
+  color: #6c6c6c;
+}
+
+.table__CN--edit .remove:hover .remove-icon{
+  color: red;
+}
+
+.table--body:hover td{
+  background-color: #F2F2F2;
+}
+
+.table--body:hover .table__CN--edit{
+  display: flex;
+}
+
+.table--body .table__CN.active{
+  background-color: transparent;
+}
+
+.table--body td.active{
+  background-color: rgb(237,248,235);
+}
+
+
+
+/**
+*Table Head
+*/
+.table--head td .wrapper{
+  display:flex;flex-direction: row;align-items: center;
+}
+.table--head td.center .wrapper{
+  display:flex;flex-direction: row;align-items: center;justify-content: center;
+}
+.table--head td.right .wrapper{
+  display:flex;flex-direction: row;align-items: center;justify-content: flex-end;
+}
+
+.table--head td:hover .filter .filter-icon{
+  display: block;
+}
+
+.table--head td p{
+  min-width: 10px;
+  display: -webkit-inline-box;
+  cursor: pointer;
+  /* margin-right: 5px; */
+}
+
+.sort{
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.sort-icon.desc{
+  background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -1850px -407px;
+  width: 10px;
+  height: 12px;
+  transform: rotate(180deg);
+}
+
+.sort-icon.asc{
+  background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -1850px -407px;
+  width: 10px;
+  height: 12px;
+}
+
+.filter{
+  margin-left: auto;
+  float: right;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+td.center .wrapper .filter{
+  margin-left: unset;
+  position: absolute;
+  right: 16px;
+}
+td.right .wrapper .filter{
+  margin-left: unset;
+  position: absolute;
+  left: 16px;
+}
+
+.filter:has(.filter-icon.active):before{
+  display: block;
+  border-top-color: #FFFFFF;
+}
+.filter:has(.filter-icon.active) .filter-wrapper{
+  display: block;
+}
+
+.filter-icon{
+  background-color: #666666;
+  display: none;
+  -webkit-mask: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -1602px -91px;
+  mask:  url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -1602px -91px;
+	width: 20px;
+	height: 19px;
+  transform: scale(0.7);
+}
+
+.filter-icon.active{
+  background-color: #50B83C;
+}
+
+.filter-wrapper{
+  height: 215px;
+  width: 312px;
+  background-color: white;
+  position: absolute;
+  bottom: -230px;
+  display: none;
+  box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.078);
+  border-radius: 4px;
+}
+
+.table--head td .wrapper:has(.filter .filter-icon.active) .filter .filter-icon.active{
+  display: block;
+}
+
+.table--head td:not(.table__MNV,.table__checkbox){
+  position: relative;
+  z-index: -1;
+}
+
+.table--head td.table__MNV:hover{
+  z-index: 4;
+}
+
+.table thead tr{
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+}
+
+.table .table--head td:last-child,.table .table--body td:last-child{
+  border-right: none;
+  border-left: 1px solid #E0E0E0;
+}
+
+.table .table--head td {
+  background-color: #F5F5F5;
+  white-space: nowrap;
+}
+.table .table--head td:hover,
+.table .table--head td:has(.wrapper .filter .filter-icon.active) {
+  background-color: #eeeeee;
+}
+
+.filter-header{
+  padding: 24px 16px 0px 16px;
+  color: #212121;
+  font-family: RobotoMedium;
+  font-size: 14px;
+  text-align: left;
+}
+
+.filter-content{
+  padding: 12px 16px 24px 16px;
+}
+
+.filtet-text{
+  width: 281.6px;
+  height: 36px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
+}
+
+.filtet-text::placeholder{
+  color: #999999;
+  	font-size: 14px;
+    font-family: RobotoRegular;
+    font-weight: 400;
+}
+
+.filtet-text:focus{
+  border: 1px solid #50b83c;
+  outline: none;
+}
+
+.filtet-text:read-only{
+  background-color: #EBEBEB;
+  border: 1px solid #E0E0E0;
+  cursor: unset;
+}
+
+.filter-button{
+  padding: 0 16px;
+  height: 56px;
+  width: calc(100% - 32px);
+  background-color: #F5F5F5;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  justify-content: flex-end;
+}
+
+.filter-button .m-btn p{
+  min-width: unset;
+}
+
+
+
+
+
+
+
+.table .table--head td p{
+  font-family: RobotoMedium !important;
+  font-weight: 500;
+}
+
+thead .table__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  top: 13px;
+  left: 15px;
+  z-index: 1;
+}
+
+thead .checkmark{
+  position:absolute;
+  top:15px;
+  left:18px;
+  width:18px;
+  height:18px;
+  background:#ffffff;
+  border-radius:4px;
+  border: 1px solid #616161;
+}
+
+thead .table__checkbox:hover .checkmark{
+  background:#e5e5e5;
+}
+
+thead .checkmark:after{
+  font-family: 'Font Awesome 5 Free';
+  content:"\f00c";
+  position:absolute;
+  display:none;
+}
+
+thead .table__checkbox .checkmark:after{
+  top:40%;
+  left:50%;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 0px 0;
+  transform:translate(-50%,-50%) rotate(90deg);
+}
+
+thead .table__checkbox .checkmark.full:after{
+  border-width: 0 3px 3px 0;
+  transform:translate(-50%,-50%) rotate(45deg);
+}
+
+
+thead .table__checkbox input:checked ~ .checkmark{
+  background:#50B83C;
+  border-color: #50B83C;
+}
+
+thead .table__checkbox input:checked ~ .checkmark:after{
+  display:block;
+  color: #ffffff;
+}
+
+
+

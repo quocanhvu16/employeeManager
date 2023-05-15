@@ -1,0 +1,144 @@
+.combobox{
+    display: flex;
+    position: relative;
+    border: 1px solid #e6e6e6;
+    height: 36px;
+    border-radius: 4px;
+}
+.combobox.error{
+    border: 1px solid red;
+}
+
+.combobox:has(.combobox__input:focus){
+    border: 1px solid #50B83C;
+}
+
+.combobox:has(.combobox__data){
+    /* border: 1px solid #50B83C; */
+}
+
+
+.combobox__input{
+    height: 36px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: #FFFFFF;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.combobox__input::placeholder{
+    color: #9e9e9e;
+    font-size: 14px;
+}
+
+#company .combobox__input{
+    width: 220px;
+}
+
+#pagination .combobox__input{
+    width: 40px;
+}
+
+#department .combobox__input,#position .combobox__input{
+    width: 422px;
+}
+
+.combobox__button{
+    height: 36px;
+    width: 36px;
+    border: none;
+    background-color: #FFFFFF;
+    border-left: 1px solid #e6e6e6;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#pagination .combobox__button{
+    transform: rotate(180deg);
+    border-right: 1px solid #e6e6e6;
+    border-left: unset;
+}
+
+.combobox__data{
+    position: absolute;
+    top: calc(100% + 1.6px);
+    background-color: #ffffff;
+    z-index: 10;
+    width: calc(100% - 16px);
+    padding: 8px;
+    box-shadow: 0px 0px 1px 1px #e6e6e6;
+    border-radius: 4px;
+}
+
+.combobox__data .scrollbar{
+    max-height: 216px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.combobox__data .scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 100px;
+} 
+
+.combobox__data .scrollbar::-webkit-scrollbar-thumb {
+    background-color: #9E9E9E;
+    border-radius: 4px;
+    height: 100px;
+}
+.combobox__data .scrollbar::-webkit-scrollbar-track {
+    background-color: #Ffffff;
+}
+
+#pagination .combobox__data{
+    top: -125.6px;
+}
+
+.combobox__data-item{
+    height: 36px;
+    padding-left: 8px;
+    line-height: 36px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 8px;
+}
+
+.combobox__data-item:hover,.combobox__data-item--selected{
+    background-color: rgba(80,184,60,0.1);
+}
+
+
+.combobox__data-item.active .check{
+    display: block;
+}
+
+.combobox__data-item.active{
+    color: #50B83C;
+}
+
+.combobox__data-item.active .check i{
+    color: #50B83C;
+}
+
+#filter,#gender,
+.filter .filter-wrapper #position,
+.filter .filter-wrapper #department{
+    width: 280px;
+    margin-bottom: 12px;
+}
+
+#filter .combobox__input,
+#gender .combobox__input,
+.filter .filter-wrapper #position .combobox__input,
+.filter .filter-wrapper #department .combobox__input{
+    width: 260px;
+}
+
+

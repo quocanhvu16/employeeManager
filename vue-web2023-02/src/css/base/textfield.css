@@ -1,0 +1,126 @@
+.textField{
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    background-color: #f6f6f6;
+}
+
+.m-label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+}
+
+.m-label input {   
+    width: 300px;
+    height: 36px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    border: 1px solid #e6e6e6;
+    margin-top: 8px;
+}
+
+.m-label input::placeholder{
+	color: #999999;
+  	font-size: 5px;
+    font-family: RobotoRegular;
+}
+
+.m-label input:hover{
+    background-color: #e6e6e6;
+  	cursor: pointer;
+}
+
+.m-label input:focus{
+    border: 1px solid #50b83c;
+  	outline: none;
+}
+
+.m-label--error input{
+    border: 1px solid #E61D1D;
+  	outline: none;
+}
+
+.m-label--error input{
+    margin-bottom: 8px;
+}
+
+.m-label--error p{
+    font-size: 7px;
+    color: #E61D1D;
+    display: block;
+}
+
+.m-label--error input:focus~p{
+    display: none;
+}
+
+.m-label--readOnly input:read-only{
+    background-color: #EBEBEB;
+    border: 1px solid #E0E0E0;
+    cursor: unset;
+}
+.m-label--validate input{
+    border: 1px solid #50b83c;
+}
+.m-label--validate i{
+    right: 8px;
+    position: absolute;
+    font-size: 13.43px;
+    color: #50B83C;
+    font-size: 20px;
+    bottom:8.8px;
+}
+
+.m-label--verifying input{
+    border: 1px solid #50b83c;
+}
+.m-label--verifying svg{
+    position: absolute;
+    width: 22px;
+    right: 9px;
+    height: 37.6px;
+    bottom:0;
+    transform: rotate(-90deg);
+}
+.m-label--verifying svg circle{
+    position: absolute;
+    color: yellow;
+    right: 8px; 
+    fill: transparent;
+    stroke-width: 2;
+    stroke: #5fbd4d;
+    stroke-dasharray: 125.6;
+    stroke-dashoffset: 70;
+}
+
+.m-label--withAction div{
+    right: 0;
+    height: 37.6px;
+    width: 36px;
+    position: absolute;
+    font-size: 13.43px;
+    color: #666666;
+    font-size: 20px;
+    bottom:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-label--withAction div:hover{
+    cursor: pointer;
+}
+.m-label--withAction div:active{
+    cursor: pointer;
+    background-color: #EBEBEB;
+}
+
+.m-label + .m-label {
+    margin-left: 24px;
+}

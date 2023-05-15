@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jX9SjTfXwSXBa0S/tsykWNM+i3sOddGWjiLugpqOVbFRdUJ9FQ7eYfAaX1evA494o+o74mbCpbckrso95sKBgg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\New folder\\New\\Demo.WebApplication\\Demo.WebApplication.Repository2\\Demo.WebApplication.Repository.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\mysqlconnector\\2.2.5\\mysqlconnector.2.2.5.nupkg.sha512"
+  ],
+  "logs": []
+}
