@@ -34,11 +34,8 @@ const data = {
     formatMoney: function(money){
         try {
             if(money){
-                console.log(money);
                 money = Number(money)
-                console.log(money);
                 money = money.toLocaleString('it-IT', {style : 'currency', currency : 'VND'});
-                console.log(money);
                 return money;
             }
             return "";

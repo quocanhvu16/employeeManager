@@ -5,14 +5,14 @@ import MainMoney from './../components/layout/money/MainMoney.vue'
 //Gán các component vào router
 const routes = [
     {
-        path: '/',
+        path: '/overview',
         name: 'home',
-        component: MainEmployee
+        component: MainMoney
     },
     {
-        path : "/money",
-        name: 'money',
-        component: MainMoney
+        path : "/",
+        name: 'employee',
+        component: MainEmployee
     },
     {
         path : "/money1",

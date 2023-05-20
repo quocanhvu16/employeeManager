@@ -173,9 +173,10 @@
     line-height: 1.2;
     position: absolute;
     border-radius: 4px;
-    top: 41px;
+    /* top: 41px; */
     z-index: 6;
     white-space: nowrap;
+    top: -55px;
 }
 
 .table__CN--edit [data-c-tooltip]:before {
@@ -187,14 +188,18 @@
     display: none;   
     position: absolute;
     transform: rotate(180deg);
-    top: 30px;
-}
-tbody tr:last-child .table__CN--edit [data-c-tooltip]:after {
-    top: -55px;
-}
-tbody tr:last-child .table__CN--edit [data-c-tooltip]:before {
     transform: rotate(0deg) !important;
+    /* top: 30px; */
     top: -7px;
+}
+tbody tr:first-child .table__CN--edit [data-c-tooltip]:after {
+    /* top: -55px; */
+    top: 41px;
+}
+tbody tr:first-child .table__CN--edit [data-c-tooltip]:before {
+    transform: rotate(180deg) !important;
+    /* top: -7px; */
+    top: 30px;
 }
 /* .table__CN--edit :hover[data-c-tooltip]:after,
 .table__CN--edit :hover[data-c-tooltip]:before{

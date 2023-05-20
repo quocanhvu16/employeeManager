@@ -4,12 +4,12 @@
             <MenuCategory :text="MISAResource[this.langCode].categoryMenu.overview" 
                         :data-c-tooltip="MISAResource[this.langCode].categoryMenu.overview" 
                         :classIcon="'frame__icon1'" 
-                        :name="'/'"
+                        :name="'/overview'"
                         />
-            <MenuCategory :text="MISAResource[this.langCode].categoryMenu.cash" 
-                        :data-c-tooltip="MISAResource[this.langCode].categoryMenu.cash" 
+            <MenuCategory :text="MISAResource[this.langCode].categoryMenu.employee" 
+                        :data-c-tooltip="MISAResource[this.langCode].categoryMenu.employee" 
                         :classIcon="'frame__icon2'" 
-                        :name="'/money'"
+                        :name="'/'"
                         />
             <MenuCategory :text="MISAResource[this.langCode].categoryMenu.deposits" 
                         :data-c-tooltip="MISAResource[this.langCode].categoryMenu.deposits" 

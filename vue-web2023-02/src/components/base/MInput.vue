@@ -26,6 +26,9 @@ export default {
             this.$emit("update:modelValue",this.input)
         },
 
+        // focusEmployeeCode1(){
+        //     this.focusEmployeeCode()
+        // },
         /**
          * Khi blur ra khỏi input , gọi sự kiện blur, áp dụng cho các input mặc định là không được để trống
          * Author: Vũ Quốc Anh (18/03/2023)

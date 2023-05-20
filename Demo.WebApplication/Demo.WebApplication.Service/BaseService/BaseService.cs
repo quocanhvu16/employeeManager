@@ -202,10 +202,10 @@ namespace Demo.WebApplication.Service
                 //Khai báo lỗi
                 var errorData = new Dictionary<string, string>();
 
-                //var propEmpties = record.GetType().GetProperties().Where(p => Attribute.IsDefined(p, typeof(NotEmpty)) == true);
                 var props = record.GetType().GetProperties();
                 foreach (var prop in props)
                 {
+                    //Lấy các thông tin như name và value của từng thành phần
                     var propValue = prop.GetValue(record);
                     var propName = prop.Name;
                     var displayName = string.Empty;
@@ -285,78 +285,6 @@ namespace Demo.WebApplication.Service
                         }
                     }
                 }
-
-                ///Validate lỗi thời gian không đúng định dạng
-                //var propTimeMalformed = record.GetType().GetProperties().Where(p => Attribute.IsDefined(p, typeof(TimeMalformed)) == true);
-                //foreach (var prop in propTimeMalformed)
-                //{
-                //    var propValue = prop.GetValue(record);
-                //    var propName = prop.Name;
-                //    if (propValue != null && (DateTime)propValue > DateTime.Now)
-                //    {
-                //        errorData.Add(propName, Resource.Validate_TimeMalformed);
-                //    }
-                //}
-
-                ///Validate lỗi không quá 20 ký tự
-                //var propLength20 = record.GetType().GetProperties().Where(p => Attribute.IsDefined(p, typeof(Length20)) == true);
-                //foreach (var prop in propLength20)
-                //{
-                //    var propValue = prop.GetValue(record);
-                //    var propName = prop.Name;
-                //    if (propValue != null && propValue.ToString().Length > 20)
-                //    {
-                //        errorData.Add(propName, Resource.Validate_Length20);
-                //    }
-                //}
-
-                /////Validate lỗi không quá 25 ký tự
-                //var propLength25 = record.GetType().GetProperties().Where(p => Attribute.IsDefined(p, typeof(Length25)) == true);
-                //foreach (var prop in propLength25)
-                //{
-                //    var propValue = prop.GetValue(record);
-                //    var propName = prop.Name;
-                //    if (propValue != null && propValue.ToString().Length > 25)
-                //    {
-                //        errorData.Add(propName, Resource.Validate_Length25);
-                //    }
-                //}
-
-                /////Validate lỗi không quá 50 ký tự
-                //var propLength50 = record.GetType().GetProperties().Where(p => Attribute.IsDefined(p, typeof(Length50)) == true);
-                //foreach (var prop in propLength50)
-                //{
-                //    var propValue = prop.GetValue(record);
-                //    var propName = prop.Name;
-                //    if (propValue != null && propValue.ToString().Length > 50)
-                //    {
-                //        errorData.Add(propName, Resource.Validate_Length50);
-                //    }
-                //}
-
-                /////Validate lỗi không quá 100 ký tự
-                //var propLength100 = record.GetType().GetProperties().Where(p => Attribute.IsDefined(p, typeof(Length100)) == true);
-                //foreach (var prop in propLength100)
-                //{
-                //    var propValue = prop.GetValue(record);
-                //    var propName = prop.Name;
-                //    if (propValue != null && propValue.ToString().Length > 100)
-                //    {
-                //        errorData.Add(propName, Resource.Validate_Length100);
-                //    }
-                //}
-
-                /////Validate lỗi không quá 255 ký tự
-                //var propLength255 = record.GetType().GetProperties().Where(p => Attribute.IsDefined(p, typeof(Length255)) == true);
-                //foreach (var prop in propLength255)
-                //{
-                //    var propValue = prop.GetValue(record);
-                //    var propName = prop.Name;
-                //    if (propValue != null && propValue.ToString().Length > 255)
-                //    {
-                //        errorData.Add(propName, Resource.Validate_Length255);
-                //    }
-                //}
 
                 return errorData;
             }

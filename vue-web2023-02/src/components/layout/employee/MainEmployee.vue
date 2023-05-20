@@ -33,18 +33,15 @@
                         style="font-size: 14px;font-family: RobotoMedium;color: #1565C0;cursor: pointer;">
                         {{ MISAResource[langCode].checkbox.selectedAllPage }}
                     </p>
-                    <div style="height:24px;width:24px;border-radius:8px;display:flex;align-items: center;justify-content:center;border: 1px solid #E0E0E0;cursor: pointer;background-color: #E0E0E0;" 
-                        @click="clickRemoveAll" v-ctrld="clickRemoveAll" class="tooltip-down"
-                        :data-c-tooltip="datasCheckbox.length == totalRecord  ? MISAResource[langCode].checkbox.removeAll : MISAResource[langCode].checkbox.removeSelected"
+                    <div style="height:36px;display:flex;align-items: center;justify-content:center;border: 1px solid #E0E0E0;cursor: pointer;border-radius:4px" 
+                        @click="clickRemoveAll" v-ctrld="clickRemoveAll"
                     >
-                        <div style="margin-left: 7px;margin-right: 7px">
-                            <div>
-                                <i style="color: #FF2B2B" class="fa-solid fa-trash-can"></i>
-                            </div>
+                        <div style="width:24px;height:24px;margin-left: 7px;margin-right: 7px;border-radius:8px;display:flex;align-items: center;justify-content:center;background-color: #E0E0E0;">
+                            <i style="color: #FF2B2B" class="fa-solid fa-trash-can"></i>
                         </div>
-                        <!-- <p style="font-size: 14px;margin-right: 16px;">
+                        <p style="font-size: 14px;margin-right: 16px;">
                             {{datasCheckbox.length == totalRecord  ? MISAResource[langCode].checkbox.removeAll : MISAResource[langCode].checkbox.removeSelected}}
-                        </p> -->
+                        </p>
                     </div>
                 </div>
             </div>

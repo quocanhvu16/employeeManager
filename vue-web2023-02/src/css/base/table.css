@@ -164,6 +164,7 @@ tbody .table__checkbox input:checked ~ .checkmark:after{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-width: 10px;
 }
 
 .table .table--body.skeleton td p{
@@ -239,18 +240,44 @@ tbody .table__CN{
   margin-top:7px;
 }
 
+.wrapper-icon{
+  display: flex;
+  flex-direction: column;
+}
+
 .table__CN--edit .edit,
 .table__CN--edit .remove,
-.table__CN--edit .duplicate{
+.table__CN--edit .duplicate,
+.table__CN--edit .other{
   z-index: 10000;
   background-color: #ffffff;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   width: 36px;height: 36px;border-radius: 18px;
+  position: relative;
+  border: 2px solid #F2F2F2;
 }
+/* .table__CN--edit .edit,
+.table__CN--edit .other{
+  position: relative;
+}
+
+.table__CN--edit .remove,
+.table__CN--edit .duplicate{
+  position: absolute;
+  display: none;
+}
+
+.table__CN--edit .remove{
+  top: 46px;
+}
+
+.table__CN--edit .duplicate{
+  top: 94px;
+} */
+
 
 .edit-icon{
   -webkit-mask: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -1434px -90px;

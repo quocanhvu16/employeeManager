@@ -710,32 +710,37 @@ export default {
         */
         clickSaveEmployee: async function(){
             try {
-                //Validate dữ liệu và truyền vào kiểu form
-                // await this.valiDate()
-                var bool = true
-                //Nếu tất cả các lỗi đều rỗng
-                // if(this.isCheckValidate()){
-                if(bool){
-                    //Nếu là form thêm nhân viên 
+
+                await this.valiDate()
+
+                // var bool = true
+                // if(bool){
+                if(this.isCheckValidate()){
                     for (let key in this.employee) {
+                        //Chỉnh các trường dữ liệu "" về null
                         if(this.employee[key] === null || this.employee[key] === ''){
                             this.employee[key] = null
                         }
+                        //Bỏ khoảng cách trắng giữa đầu và cuối
                         else{
                             if(!Number.isFinite(this.employee[key])){
                                 this.employee[key] = this.employee[key]?.trim()
                             }
                         }
                     }
+
+                    //Nếu là form thêm hoặc form nhân bản
                     if(this.detailFormMode==MISAEnum.FormMode.Add ||this.detailFormMode==MISAEnum.FormMode.Duplicate){
-                        //Gọi API thêm nhân viên
+                        //Gọi API
                         let response = await this.addEmployee(this.employee)
-                        //Nếu API call không thành công thì show toast báo lỗi
                         const responseJson = await response.json()
+
+                        //Nếu call API có lỗi validate thì shpw lỗi ra trên form
                         if(response.status == 201 && responseJson.success == false){
                             this.errors = responseJson.result.data
                             this.$store.commit('HIDE_LOADING')
                         } 
+
                         //Nếu call API thành công thì show toast thành công
                         else if(response.status == 201 && responseJson.success == true){
                             //Call lại API lấy tất cả dữ liệu để render vào bảng  
@@ -746,6 +751,8 @@ export default {
                                 form.showToast(MISAResource[this.langCode].toast.toastAddSuccess,MISAEnum.ToastMode.Success)
                             }, 1000);
                         }
+
+                        //Nếu call API thất bại , có exception thì hiện toast báo lỗi cho người dùng
                         else{
                             setTimeout(async() => {
                                 await this.getEmployeeFilter(this.filter)
@@ -755,17 +762,26 @@ export default {
                             }, 1000);
                         }
                     } 
+
                     //Nếu là form sửa nhân viên 
                     if(this.detailFormMode==MISAEnum.FormMode.Update){
+
+                        //Kiểm tra xem dữ liệu có bị thay đổi không mới call API
                         let newDataJson = JSON.stringify(this.employee)
+
+                        //Nếu dữ liệu có thay đổi
                         if(newDataJson != this.rootData){
+
+                            //Call API 
                             let response = await this.editEmployee(this.employee)
                             const responseJson = await response.json()
-                            //Nếu lỗi là trùng mã code
+
+                            //Nếu call API có lỗi validate thì shpw lỗi ra trên form
                             if(response.status == 200 && responseJson.success == false){
                                 this.errors = responseJson.result.data
                                 this.$store.commit('HIDE_LOADING')
                             }
+
                             //Nếu lỗi là không tồn tại tài nguyên
                             else if(response.status == 404) {
                                 setTimeout(async() => {
@@ -775,6 +791,7 @@ export default {
                                     form.showToast(responseJson.result.userMsg,MISAEnum.ToastMode.Error)
                                 }, 1000);
                             }
+
                             //Nếu call API thành công thì show toast thành công
                             else if(response.status == 200 && responseJson.success == true){
                                 //Call lại API lấy tất cả dữ liệu để render vào bảng  
@@ -785,6 +802,8 @@ export default {
                                     form.showToast(MISAResource[this.langCode].toast.toastEditSuccess,MISAEnum.ToastMode.Success)
                                 }, 1000);
                             }
+
+                            //Nếu có lỗi khác như exception 
                             else{
                                 setTimeout(async() => {
                                     await this.getEmployeeFilter(this.filter)
@@ -794,10 +813,12 @@ export default {
                                 }, 1000);
                             }
                         }
+
+                        //Nếu dữ liệu không có thay đổi
                         else{
-                            await this.getEmployeeFilter(this.filter)
+                            // await this.getEmployeeFilter(this.filter)
                             this.$store.commit('HIDE_FORM')
-                            this.$store.commit('HIDE_LOADING')
+                            // this.$store.commit('HIDE_LOADING')
                             form.showToast(MISAResource[this.langCode].toast.toastEditSuccess,MISAEnum.ToastMode.Success)
                         }
                         
@@ -815,29 +836,36 @@ export default {
         */
         async clickSaveEmployeeAndAdd(){
             try {
-                //Validate dữ liệu và truyền vào kiểu form
+
                 await this.valiDate()
-                //Nếu tất cả các lỗi đều rỗng
+
                 if(this.isCheckValidate()){
                     for (let key in this.employee) {
+                        //Chỉnh các trường dữ liệu "" về null
                         if(this.employee[key] === null || this.employee[key] === ''){
                             this.employee[key] = null
                         }
+                        //Bỏ khoảng cách trắng giữa đầu và cuối
                         else{
                             if(!Number.isFinite(this.employee[key])){
                                 this.employee[key] = this.employee[key]?.trim()
                             }
                         }
                     }
-                    //Nếu là form thêm nhân viên 
+
+                    //Nếu là form thêm nhân viên hoặc nhân bản
                     if(this.detailFormMode==MISAEnum.FormMode.Add || this.detailFormMode==MISAEnum.FormMode.Duplicate){
-                        //Gọi API thêm nhân viên
+
+                        //Gọi API
                         let response = await this.addEmployee(this.employee)
                         const responseJson = await response.json()
+
+                        //Nếu kết quả có lỗi validate 
                         if(response.status == 201 && responseJson.success == false){
                             this.errors = responseJson.result.data
                             this.$store.commit('HIDE_LOADING')
                         } 
+
                         //Nếu call API thành công thì show toast thành công
                         else if(response.status == 201 && responseJson.success == true){
                             setTimeout(async() => {
@@ -845,11 +873,13 @@ export default {
                                 this.$store.commit('HIDE_FORM')
                                 await this.getEmployeeFilter(this.filter)
                                 this.$store.commit('HIDE_LOADING')
-                                //Call lại API lấy tất cả dữ liệu để render vào bảng  
                                 this.$store.commit('CHANGE_FORMMODE',MISAEnum.FormMode.Add)
                                 this.$store.commit('SHOW_FORM')
+                                this.restForm()
                             }, 1000);
                         }
+
+                        //Nếu call API có lỗi xảy ra
                         else if(response.status == 400){
                             setTimeout(async() => {
                                 form.showToast(responseJson.result.userMsg,MISAEnum.ToastMode.Error)
@@ -858,21 +888,25 @@ export default {
                                 this.$store.commit('HIDE_LOADING')
                                 this.$store.commit('CHANGE_FORMMODE',MISAEnum.FormMode.Add)
                                 this.$store.commit('SHOW_FORM')
+                                this.restForm()
                             }, 1000);
                         }
                     } 
+
                     //Nếu là form sửa nhân viên 
                     if(this.detailFormMode==MISAEnum.FormMode.Update){
                         let newDataJson = JSON.stringify(this.employee)
                         if(newDataJson != this.rootData){
                             //Gọi API sửa nhân viên
                             let response = await this.editEmployee(this.employee)
-                            //Nếu API call không thành công thì show toast báo lỗi
                             const responseJson = await response.json()
+
+                            //Nếu có lỗi lúc validate
                             if(response.status == 200 && responseJson.success == false){
                                 this.errors = responseJson.result.data
                                 this.$store.commit('HIDE_LOADING')
                             }
+
                             //Nếu lỗi là không tồn tại tài nguyên
                             else if(response.status == 404) {
                                 setTimeout(async() => {
@@ -882,6 +916,7 @@ export default {
                                     form.showToast(responseJson.result.userMsg,MISAEnum.ToastMode.Error)
                                 }, 1000);
                             } 
+                            
                             //Nếu call API thành công thì show toast thành công
                             else if(response.status == 200 && responseJson.success == true){
                                 setTimeout(async() => {
@@ -889,31 +924,33 @@ export default {
                                     this.$store.commit('HIDE_FORM')
                                     await this.getEmployeeFilter(this.filter)
                                     this.$store.commit('HIDE_LOADING')
-                                    //Call lại API lấy tất cả dữ liệu để render vào bảng  
                                     this.$store.commit('CHANGE_FORMMODE',MISAEnum.FormMode.Add)
                                     this.$store.commit('SHOW_FORM')
+                                    this.restForm()
                                 }, 1000);
                             }
-                            else{
-                                setTimeout(async() => {
-                                    form.showToast(MISAResource[this.langCode].toast.toastEditSuccess,MISAEnum.ToastMode.Success)
-                                    this.$store.commit('HIDE_FORM')
-                                    await this.getEmployeeFilter(this.filter)
-                                    this.$store.commit('HIDE_LOADING')
-                                    //Call lại API lấy tất cả dữ liệu để render vào bảng  
-                                    this.$store.commit('CHANGE_FORMMODE',MISAEnum.FormMode.Add)
-                                    this.$store.commit('SHOW_FORM')
-                                }, 1000);
-                            }
+                            //Nếu call API thành công
+                            // else{
+                            //     setTimeout(async() => {
+                            //         form.showToast(MISAResource[this.langCode].toast.toastEditSuccess,MISAEnum.ToastMode.Success)
+                            //         this.$store.commit('HIDE_FORM')
+                            //         await this.getEmployeeFilter(this.filter)
+                            //         this.$store.commit('HIDE_LOADING')
+                            //         this.$store.commit('CHANGE_FORMMODE',MISAEnum.FormMode.Add)
+                            //         this.$store.commit('SHOW_FORM')
+                            //     }, 1000);
+                            // }
                         }
+
+                        //Nếu dữ liệu không có gì thay đổi
                         else{
                             form.showToast(MISAResource[this.langCode].toast.toastEditSuccess,MISAEnum.ToastMode.Success)
                             this.$store.commit('HIDE_FORM')
                             await this.getEmployeeFilter(this.filter)
                             this.$store.commit('HIDE_LOADING')
-                            //Call lại API lấy tất cả dữ liệu để render vào bảng  
                             this.$store.commit('CHANGE_FORMMODE',MISAEnum.FormMode.Add)
                             this.$store.commit('SHOW_FORM')
+                            this.restForm()
                         }
                         
                     }
@@ -921,6 +958,25 @@ export default {
             } catch (error) {
                 console.log(error);
             }
+        },
+
+        /**
+         * Khi ấn cất và thêm sẽ reset form lại
+         * Author: Vũ Quốc Anh (19/04/2023)
+        */
+        restForm(){
+            this.employee = {}
+            this.errors = {}
+            this.employee.gender = 0 
+            this.newEmployeeCode()
+        },
+
+        /**
+         * Focus vào ô input đầu tiên
+         * Author: Vũ Quốc Anh (19/04/2023)
+        */
+        focusEmployeeCOde(){
+            this.$refs.EmployeeCode.focus()
         },
 
         /**

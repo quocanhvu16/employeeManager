@@ -292,7 +292,6 @@ namespace Demo.WebApplication.Service
                 }
 
                 ///Không được để trùng
-                //var propNotDuplicate = employee.GetType().GetProperties().Where(p => Attribute.IsDefined(p, typeof(NotDuplicate)) == true);
                 var props = employee.GetType().GetProperties();
                 foreach (var prop in props)
                 {
@@ -325,29 +324,6 @@ namespace Demo.WebApplication.Service
                             }
                         }
                     }
-                    //if (!errorData.ContainsKey(propName))
-                    //{
-                    //    CheckDuplicate checkMode = CheckDuplicate.EmployeeCode;
-                    //    switch (propName)
-                    //    {
-                    //        case "EmployeeCode":
-                    //            checkMode = CheckDuplicate.EmployeeCode;
-                    //            break;
-                    //        case "IdentityNumber":
-                    //            checkMode = CheckDuplicate.IdentityNumber;
-                    //            break;
-                    //    }
-                    //    var displayName = string.Empty;
-                    //    var propertyName = prop.GetCustomAttributes(typeof(PropertyName), true);
-                    //    if (propertyName.Length > 0)
-                    //    {
-                    //        displayName = (propertyName[0] as PropertyName).Name;
-                    //    }
-                    //    if (_employeeRepository.CheckDuplicateCode((string)propValue, employee.EmployeeId, checkMode))
-                    //    {
-                    //        errorData.Add(propName, displayName + Resource.Validate_CheckDuplicate);
-                    //    }
-                    //}
                 }
                 return errorData;
             }
